@@ -1,5 +1,11 @@
-function helloNpm() {
-    return "hello NPM"
+function vignerFunc(plaintext) {
+    return plaintext + "edited"
+}
+function playfairFunc(plaintext) {
+    return plaintext + "edited"
 }
 
-module.exports = helloNpm
+module.exports = {
+    playfair: playfairFunc,
+    vigner: vignerFunc
+};
