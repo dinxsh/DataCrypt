@@ -11,6 +11,10 @@ router.post('/encrypt', async function (req, res) {
     res.status(200).json({ status: 200, data: hashHex });
 });
 
+router.get('/encrypt', async function (req, res) {
+    res.send("hi");
+});
+
 router.get('/status', function (req, res) {
     res.status(200).json({ status: "200" });
 });
