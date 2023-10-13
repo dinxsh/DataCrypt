@@ -1,2 +1,2 @@
 # DataCrypt
-a website to encrypt / decrypt text in various formats
+an REST API to encrypt / decrypt text using 10 different algorithms
