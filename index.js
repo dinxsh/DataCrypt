@@ -4,9 +4,7 @@ const PORT = 8000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(function (req, res) {
-    res.status(404).send('<h1><a href="/">go back</a></h1>');
-});
+app.set('view engine', 'ejs');
 
 const types = require('./routes/types')
 const api = require('./routes/api')
