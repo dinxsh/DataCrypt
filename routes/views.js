@@ -9,4 +9,8 @@ router.get('/about', (req, res) => {
     res.render('about', req.query);
 });
 
+router.get('/get-started', (req, res) => {
+    res.render('get-started', req.query);
+});
+
 module.exports = router

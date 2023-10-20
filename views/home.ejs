@@ -1,29 +1,4 @@
-<!-- main.ejs -->
-<HTML>
-    <head>
-      <title> Homepage </title>
-    </head>
-    <body>
-      <% include navbar.ejs %>
-      <!-- Here you can add those JS variables, because the page will render everything and find them when he loads the included file-->
-      <script>
-        const links = [
-          {
-            href: '/',
-            icon: '<svg>...</svg>',
-            text: 'Home'
-          },
-          {
-            href: 'collection',
-            icon: '<svg>...</svg>',
-            text: 'Collection'
-          },
-          {
-            href: 'live',
-            icon: '<svg>...</svg>',
-            text: 'Live'
-          }
-        ];
-      </script>
-    </body>
-  </html>
+  <body>
+    <%- include('navbar'); -%>
+    <h1>home</h1>
+  </body>

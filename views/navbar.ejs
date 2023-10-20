@@ -1,13 +1,24 @@
-<!-- navbar.ejs -->
+
+<head>
+  <title>Datacrypt</title>
+</head>
+
 <nav class="navbar">
     <ul class="navbar-blocks">
-      <% for (var i = 0; i < links.length; i++) { %>
         <li class="nav-icon">
-          <a href="<%= links[i].href %>" class="nav-link">
-            <%= links[i].icon %>
-            <span class="link-text"><%= links[i].text %></span>
+          <a href="/" class="nav-link">
+            <span class="link-text">home</span>
           </a>
         </li>
-      <% } %>
+        <li class="nav-icon">
+          <a href="get-started" class="nav-link">
+            <span class="link-text">get started</span>
+          </a>
+        </li>
+        <li class="nav-icon">
+          <a href="about" class="nav-link">
+            <span class="link-text">about</span>
+          </a>
+        </li>
     </ul>
   </nav>
