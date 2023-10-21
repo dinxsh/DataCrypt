@@ -1,5 +1,6 @@
 <body>
   <%- include('navbar'); -%>
-    <h1>home</h1>
-    <%- include('components/crud') -%>
+
+    <%- include('components/supported', {data: algorithms}) -%>
+      <%- include('components/crud') -%>
 </body>
