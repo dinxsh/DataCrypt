@@ -1,4 +1,4 @@
-# DataCrypt
+# DataCrypt [WIP]
 an blazingly fast REST API to encrypt / decrypt text using 10 different algorithms
 
 why datacrypt?
