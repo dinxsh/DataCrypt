@@ -1,8 +1,10 @@
 const express = require('express')
+
 const router = express.Router()
 
-router.get('/', (req, res) => {
-    res.render('home', req.query);
+router.get('/', async(req, res) => {
+    const data = await fetch("http://localhost:8000/types/all").then(res=>res.json())
+    res.render('home', {algorithms: data});
 });
 
 router.get('/about', (req, res) => {
