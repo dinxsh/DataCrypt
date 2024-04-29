@@ -5,6 +5,7 @@ const PORT = 8000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
+app.use(express.static('public'))
 
 const types = require('./routes/types')
 const api = require('./routes/api')
