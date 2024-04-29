@@ -2,17 +2,16 @@ const express = require('express')
 
 const router = express.Router()
 
-router.get('/', async(req, res) => {
-    const data = await fetch("http://localhost:8000/types/all").then(res=>res.json())
-    res.render('home', {algorithms: data});
+router.get('/', async (req, res) => {
+    res.sendFile('home.html', { root: "./views" });
 });
 
 router.get('/about', (req, res) => {
-    res.render('about', req.query);
+    res.sendFile('about.html', { root: "./views" });
 });
 
 router.get('/get-started', (req, res) => {
-    res.render('get-started', req.query);
+    res.sendFile('get-started.html', { root: "./views" });
 });
 
 module.exports = router
