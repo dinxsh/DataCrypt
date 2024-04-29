@@ -18,4 +18,12 @@ router.get('/updates', (req, res) => {
     res.sendFile('updates.html', { root: "./views" });
 });
 
+router.get('/login', (req, res) => {
+    res.sendFile('login.html', { root: "./views" });
+});
+
+router.get('/register', (req, res) => {
+    res.sendFile('register.html', { root: "./views" });
+});
+
 module.exports = router
