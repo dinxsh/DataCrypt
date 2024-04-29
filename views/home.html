@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-mono">
+    <div class="bg-brown-700">
+      <nav class="flex items-center justify-between flex-wrap bg-purple-600 p-6 text-white">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <span class="font-semibold text-xl tracking-tight">Datacrypt</span>
+        </div>
+        <div class="block lg:hidden">
+          <button class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-purple-600 hover:bg-white">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          </button>
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="text-sm lg:flex-grow">
+            <a href="docs" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-purple-300 mr-4">
+              Docs
+            </a>
+            <a href="examples" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-purple-300 mr-4">
+              Examples
+            </a>
+            <a href="updates" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-purple-300">
+              Updates
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="flex flex-col items-center justify-center h-screen bg-gray-100 text-gray-800">
+        <h1 class="text-5xl font-bold mb-5 animate-pulse">Welcome to <span class="text-purple-600">Datacrypt!</span></h1>
+        <p class="text-2xl mb-5 px-6 text-center">Your one-stop solution for data encryption and security.</p>
+        <div class="flex space-x-4 mt-10">
+            <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transform transition duration-500 ease-in-out hover:scale-110">Read Docs <span>&rarr;</span></button>
+            <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transform transition duration-500 ease-in-out hover:scale-110">View Playground <span>&rarr;</span></button>
+        </div>
+    </div>
+    <footer class="fixed inset-x-0 bottom-0 bg-brown-700 text-black-300 p-3">
+        <div class="container mx-auto text-center py-6">
+            <div class="mb-3 flex justify-center">
+                <a href="#" class="mx-3 text-black-300 hover:text-grey-700">About us</a>
+                <a href="#" class="mx-3 text-black-300 hover:text-grey-700">Terms of Service</a>
+                <a href="#" class="mx-3 text-black-300 hover:text-grey-700">Privacy Policy</a>
+            </div>
+            <p class="mb-3 text-black-300">
+                &copy; 2024 DataCrypt, All rights reserved by <a href="https://github.com/dinxsh">Dinesh Talwadker</a>. Open source <a href="https://github.com/dinxsh/datacrypt"><u>here</u></a>.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
