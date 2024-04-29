@@ -3,27 +3,27 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/', async (req, res) => {
-    res.sendFile('home.html', { root: "./views" });
+    res.render('home');
 });
 
 router.get('/about', (req, res) => {
-    res.sendFile('about.html', { root: "./views" });
+    res.render('about');
 });
 
 router.get('/get-started', (req, res) => {
-    res.sendFile('get-started.html', { root: "./views" });
+    res.render('get-started');
 });
 
 router.get('/updates', (req, res) => {
-    res.sendFile('updates.html', { root: "./views" });
+    res.render('updates');
 });
 
 router.get('/login', (req, res) => {
-    res.sendFile('login.html', { root: "./views" });
+    res.render('login');
 });
 
 router.get('/register', (req, res) => {
-    res.sendFile('register.html', { root: "./views" });
+    res.render('register');
 });
 
 module.exports = router

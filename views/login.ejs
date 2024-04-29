@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <title>
+      DataCrypt
+    </title>
+</head>
+<body class="bg-gray-100 font-mono">
+    <div class="bg-brown-700">
+    <%- include('./components/navbar') %>
+    </div>
+    <div class="bg-white p-6 text-purple-500">
+        <div class="my-32 mx-96">
+            <form action="/api/register" method="POST">
+                <h2 class="my-3 text-2xl">Login</h2>
+                <label for="username" class="block mb-2">Email:</label>
+                <input type="text" id="username" name="username" class="w-full mb-4 p-2 bg-white text-purple-600 border-2 border-purple-600 rounded">
+
+                <label for="password" class="block mb-2">Password:</label>
+                <input type="password" id="password" name="password" class="w-full mb-4 p-2 bg-white text-purple-600 border-2 border-purple-600 rounded">
+
+                <input type="submit" value="Register" class="w-full p-2 bg-purple-400 text-white rounded cursor-pointer hover:bg-purple-300">
+            </form>
+        </div>
+    </div>
+</body>
+</html> 
