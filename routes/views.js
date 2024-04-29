@@ -14,4 +14,8 @@ router.get('/get-started', (req, res) => {
     res.sendFile('get-started.html', { root: "./views" });
 });
 
+router.get('/updates', (req, res) => {
+    res.sendFile('updates.html', { root: "./views" });
+});
+
 module.exports = router
