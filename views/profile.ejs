@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <title>
+      DataCrypt
+    </title>
+</head>
+<body class="bg-gray-100 font-mono">
+    <div class="bg-brown-700">
+    <%- include('./components/navbar') %>
+
+    <div>
+        <div class="my-32 mx-96">
+            <% if (user) { %>
+                <div>
+                    username:
+                    <a href="/profile" class="block mt-4 lg:inline-block lg:mt-0 text-purple-500">
+                        <%= user.username %>
+                    </a> <br>
+                    email:
+                    <a href="/profile" class="block mt-4 lg:inline-block lg:mt-0 text-purple-500">
+                        <%= user.email %>
+                    </a> <br> <br>
+                    <a href="/profile" class="block mt-4 lg:inline-block lg:mt-0 text-purple-500">
+                        logout
+                    </a>
+                </div>
+            <% } else { %>
+                <a href="register" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-purple-300">
+                    Register
+                </a>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
