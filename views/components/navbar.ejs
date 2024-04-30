@@ -15,15 +15,18 @@
             </a>
         </div>
         <div>
-            <% if (user) { %>
-                <a href="/profile" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-purple-300">
-                    <%= user.username %>
-                </a>
-            <% } else { %>
-                <a href="register" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-purple-300">
-                    Register
-                </a>
-            <% } %>
+            <div class="flex items-center">
+                <% if (user) { %>
+                    <a href="/profile" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-purple-300 mr-4">
+                        <%= user.username %>
+                    </a>
+                    <a href="/profile"><img src="<%= user.profile %>" alt="profile" class="w-10 h-10 rounded-full"></a>
+                <% } else { %>
+                    <a href="register" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-purple-300">
+                        Register
+                    </a>
+                <% } %>
+            </div>
         </div>
     </div>
 </nav>

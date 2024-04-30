@@ -15,14 +15,15 @@
             <h2 class="text-xl">My Profile</h2><br>
             <% if (user) { %>
                 <div>
+                    <img src="<%= user.profile %>" alt="profile" class="w-16 h-16 rounded-full mb-3">
                     username:
-                    <a href="/profile" class="block mt-4 lg:inline-block lg:mt-0 text-purple-500">
+                    <p class="block mt-4 lg:inline-block lg:mt-0 text-purple-500">
                         <%= user.username %>
-                    </a> <br>
+                    </p> <br>
                     email:
-                    <a href="/profile" class="block mt-4 lg:inline-block lg:mt-0 text-purple-500">
+                    <p class="block mt-4 lg:inline-block lg:mt-0 text-purple-500">
                         <%= user.email %>
-                    </a> <br> <br>
+                    </p> <br> <br>
                     <a href="/profile" class="block mt-4 lg:inline-block lg:mt-0 text-purple-500">
                         logout
                     </a>

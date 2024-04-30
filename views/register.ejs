@@ -15,6 +15,22 @@
         <div class="my-32 mx-96">
             <form action="/auth/register" method="POST">
                 <h2 class="my-3 text-2xl">Register</h2>
+                <label for="profile" class="block mb-2">Profile Picture:</label>
+                <div class="flex space-x-4 my-4">
+                    <label>
+                        <input type="radio" name="profile" value="av/1.jpg">
+                        <img src="av/1.jpg" alt="profile" class="w-14 h-14 rounded-full">
+                    </label>
+                    <label>
+                        <input type="radio" name="profile" value="av/2.jpg">
+                        <img src="av/2.jpg" alt="profile" class="w-14 h-14 rounded-full">
+                    </label>
+                    <label>
+                        <input type="radio" name="profile" value="av/3.jpg">
+                        <img src="av/3.jpg" alt="profile" class="w-14 h-14 rounded-full">
+                    </label>
+                </div>
+
                 <label for="username" class="block mb-2">Username:</label>
                 <input type="text" id="username" value="test" name="username" class="w-full mb-4 p-2 bg-white text-purple-600 border-2 border-purple-600 rounded">
 
