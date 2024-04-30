@@ -30,7 +30,6 @@ app.use('/api', api);
 app.use('/', views);
 app.use('/auth', auth);
 
-app.listen(PORT, function (err) {
-    if (err) console.log(err);
+app.listen(PORT, () => {
     console.log("Server listening on PORT", PORT);
 });
