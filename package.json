@@ -10,5 +10,28 @@
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.3",
     "nodemon": "^3.0.1"
-  }
+  },
+  "name": "datacrypt",
+  "description": "an blazingly fast REST API to encrypt / decrypt text using 10 different algorithms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dinxsh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinxsh/dataCrypt.git"
+  },
+  "keywords": [
+    "security",
+    "cryptography",
+    "security-tools"
+  ],
+  "bugs": {
+    "url": "https://github.com/dinxsh/dataCrypt/issues"
+  },
+  "homepage": "https://github.com/dinxsh/dataCrypt#readme"
 }
