@@ -3,6 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 const path = require('path');
 const bodyParser = require('body-parser')
+const session = require('express-session');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -16,6 +17,13 @@ const types = require('./routes/types');
 const api = require('./routes/api');
 const views = require('./routes/views');
 const auth = require('./routes/auth');
+
+app.use(session({
+    secret: 'uid',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+}));
 
 app.use('/types', types);
 app.use('/api', api);

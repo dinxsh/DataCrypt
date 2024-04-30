@@ -3,35 +3,59 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/', async (req, res) => {
-    res.render('home');
+    if (req.session.user) {
+        res.render('home', { user: req.session.user });
+    } else {
+        res.render('home', { user: undefined });
+    }
 });
 
 router.get('/about', (req, res) => {
-    res.render('about');
+    if (req.session.user) {
+        res.render('about', { user: req.session.user });
+    } else {
+        res.render('about');
+    }
 });
 
 router.get('/get-started', (req, res) => {
-    res.render('get-started');
+    if (req.session.user) {
+        res.render('get-started', { user: req.session.user });
+    } else {
+        res.render('get-started');
+    }
 });
 
 router.get('/updates', (req, res) => {
-    res.render('updates');
-});
+    if (req.session.user) {
+        res.render('updates', { user: req.session.user });
+    } else {
+        res.render('updates');
+    }});
 
 router.get('/login', (req, res) => {
-    res.render('login');
+    const user = req.session.user;
+    res.render('login', { user }); 
 });
 
 router.get('/register', (req, res) => {
-    res.render('register');
+    const user = req.session.user;
+    res.render('register', { user }); 
 });
 
 router.get('/docs', (req, res) => {
-    res.render('docs');
-});
+    if (req.session.user) {
+        res.render('docs', { user: req.session.user });
+    } else {
+        res.render('docs');
+    }});
 
 router.get('/examples', (req, res) => {
-    res.render('examples');
+    if (req.session.user) {
+        res.render('examples', { user: req.session.user });
+    } else {
+        res.render('examples');
+    }
 });
 
 module.exports = router

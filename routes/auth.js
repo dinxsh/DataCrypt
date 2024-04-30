@@ -22,20 +22,26 @@ router.post('/register', async (req, res) => {
     try {
         const { username, email, password } = req.body;
         const hashedPassword = await bcrypt.hash(password, saltRounds);
-        console.log(hashedPassword)
         const user = new User({ username, email, password: hashedPassword});
         await user.save();
+        req.session.user = {
+            id: user._id,
+            username: user.username,
+            email: user.email
+        };
         res.redirect('/');
     } catch (error) {
         res.status(500).send('Error registering user');
     }
 });
 
-router.post('/login', (req, res) => {
-    const username = req.body.username;
-    const email = req.body.email;
-    const password = req.body.password;
-    res.send('User logged in successfully!');
+router.post('/login', async (req, res) => {    
+    const { username, password } = req.body;
+    const user = await User.findOne({ username });
+    if (!user || !(await bcrypt.compare(password, user.password))) {
+        return res.status(400).send('Invalid username or password');
+    }
+    res.redirect('/');
 });
 
 module.exports = router
