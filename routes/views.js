@@ -39,7 +39,17 @@ router.get('/docs', (req, res) => {
 
 router.get('/profile', (req, res) => {
     const user = req.session.user;
-    res.render('profile', { user }); 
+    res.render('profile', { user });
+});
+
+router.get('/examples', (req, res) => {
+    const user = req.session.user;
+    res.render('examples', { user });
+});
+
+router.get('/playground', (req, res) => {
+    const user = req.session.user;
+    res.render('playground', { user });
 });
 
 module.exports = router
