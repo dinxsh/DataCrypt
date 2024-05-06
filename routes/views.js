@@ -1,4 +1,5 @@
 const express = require('express')
+const crypto = require('crypto');
 
 const router = express.Router()
 
@@ -48,8 +49,9 @@ router.get('/examples', (req, res) => {
 });
 
 router.get('/playground', (req, res) => {
+    const ciphers = crypto.getCiphers();
     const user = req.session.user;
-    res.render('playground', { user });
+    res.render('playground', { user, ciphers:ciphers });
 });
 
 module.exports = router
