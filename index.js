@@ -18,6 +18,7 @@ const api = require('./routes/api');
 const views = require('./routes/views');
 const auth = require('./routes/auth');
 
+app.set('trust proxy', 1);
 app.use(session({
     secret: 'uid',
     resave: false,
