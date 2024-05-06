@@ -25,10 +25,10 @@ app.use(session({
     cookie: { secure: true }
 }));
 
-app.use('/types', types);
-app.use('/api', api);
 app.use('/', views);
 app.use('/auth', auth);
+app.use('/api', api);
+app.use('/types', types);
 
 app.listen(PORT, () => {
     console.log("Server listening on PORT", PORT);

@@ -29,6 +29,7 @@ router.post('/register', async (req, res) => {
             email: user.email,
             profile: user.profile
         };
+        console.log(req.session.user)
         res.redirect('/');
     } catch (error) {
         res.status(500).send('Error registering user' + error);
@@ -41,6 +42,12 @@ router.post('/login', async (req, res) => {
     if (!user || !(await bcrypt.compare(password, user.password))) {
         return res.status(400).send('Invalid username or password');
     }
+    req.session.user = {
+        id: user._id,
+        username: user.username,
+        email: user.email,
+        profile: user.profile
+    };
     res.redirect('/');
 });
 
