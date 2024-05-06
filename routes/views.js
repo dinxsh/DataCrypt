@@ -50,6 +50,7 @@ router.get('/examples', (req, res) => {
 
 router.get('/playground', (req, res) => {
     const ciphers = crypto.getCiphers();
+    console.log(ciphers.length)
     const user = req.session.user;
     res.render('playground', { user, ciphers:ciphers });
 });
