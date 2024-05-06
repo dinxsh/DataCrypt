@@ -24,9 +24,9 @@
                     <p class="block mt-4 lg:inline-block lg:mt-0 text-purple-500">
                         <%= user.email %>
                     </p> <br> <br>
-                    <a href="/profile" class="block mt-4 lg:inline-block lg:mt-0 text-purple-500">
-                        logout
-                    </a>
+                    <form action="/auth/logout" method="POST" class="inline">
+                        <button type="submit" class="block mt-4 lg:inline-block lg:mt-0 text-purple-500 bg-transparent border-none">logout</button>
+                    </form>
                 </div>
             <% } else { %>
                 <a href="register" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-purple-300">

@@ -23,6 +23,7 @@ app.use(session({
     secret: 'uid',
     resave: false,
     saveUninitialized: true,
+    // cookie: { secure: false }
     cookie: { secure: true }
 }));
 

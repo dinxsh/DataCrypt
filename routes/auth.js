@@ -51,4 +51,18 @@ router.post('/login', async (req, res) => {
     res.redirect('/');
 });
 
+router.post('/logout', (req, res) => {
+    req.session.destroy(err => {
+        if(err) {
+            return res.redirect('/');
+        }
+        res.clearCookie('uid');
+        res.redirect('/login');
+    });
+});
+
+router.post('/forgot', async (req, res) => {
+    res.render('forgot', { user });
+});
+
 module.exports = router
