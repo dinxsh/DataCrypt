@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 8000;
 const path = require('path');
 const bodyParser = require('body-parser')
 const session = require('express-session');
+const MemoryStore = require('memorystore')(session)
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -20,6 +21,10 @@ const auth = require('./routes/auth');
 
 app.set('trust proxy', 1);
 app.use(session({
+    cookie: { maxAge: 86400000 },
+    store: new MemoryStore({
+      checkPeriod: 86400000
+    }),
     secret: 'uid',
     resave: false,
     saveUninitialized: true,
