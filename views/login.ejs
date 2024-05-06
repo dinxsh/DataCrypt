@@ -14,15 +14,23 @@
         <div class="my-32 mx-96">
             <form action="/auth/login" method="POST">
                 <h2 class="my-3 text-2xl">Login</h2>
-                <label for="username" class="block mb-2">Email:</label>
+                <label for="username" class="block mb-2">Username:</label>
                 <input type="text" id="username" name="username" class="w-full mb-4 p-2 bg-white text-purple-600 border-2 border-purple-600 rounded">
 
                 <label for="password" class="block mb-2">Password:</label>
                 <input type="password" id="password" name="password" class="w-full mb-4 p-2 bg-white text-purple-600 border-2 border-purple-600 rounded">
 
-                <input type="submit" value="Register" class="w-full p-2 bg-purple-400 text-white rounded cursor-pointer hover:bg-purple-300">
+                <div class="flex items-center mb-2">
+                    <label for="remember" class="mr-2">remember me</label>
+                    <input type="checkbox" id="remember" name="remember" checked>
+                </div>          
 
-                <a href="register" class="mt-5">don't have an account? register</a>
+                <input type="submit" value="Login" class="w-full p-2 bg-purple-400 text-white rounded cursor-pointer hover:bg-purple-300" />
+
+                <div class="mt-5">
+                    <a href="register">don't have an account? register</a><br />
+                    <a href="forgot">forgot password? regenerate</a>
+                </div>
             </form>
         </div>
     </div>
