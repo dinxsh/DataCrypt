@@ -35,16 +35,19 @@
             </select>
 
             <label for="text" class="block mb-2">Text :</label>
-            <input type="text" id="text" name="method" class="w-full mb-4 p-2 bg-white text-purple-600 border-2 border-purple-600 rounded" required></input>
+            <input type="text" id="text" maxlength="20" minlength="3" name="method" class="w-full mb-4 p-2 bg-white text-purple-600 border-2 border-purple-600 rounded" required></input>
 
             <label for="key" class="block mb-2">Key :</label>
-            <input type="key" id="key" name="method" class="w-full mb-4 p-2 bg-white text-purple-600 border-2 border-purple-600 rounded" required></input>
+            <input type="key" id="key" maxlength="20" minlength="3" name="method" class="w-full mb-4 p-2 bg-white text-purple-600 border-2 border-purple-600 rounded" required></input>
 
             <button type="submit" class="w-full p-2 bg-purple-600 text-white rounded">Send Request</button>
         </form>
 
+        <div id="progress-bar" class="bg-purple-600 h-2 my-4"></div>
+
         <h2 class="text-center text-xl my-10">Response</h2>
-        <pre id="response" class="p-4 bg-white text-purple-600 border-2 border-purple-600 rounded mb-20"></pre>
+        <pre id="response" class="p-4 bg-white text-purple-600 border-2 border-purple-600 rounded mb-5"></pre>
+        <button id="copy-button" class="w-full p-2 bg-purple-600 text-white rounded mb-20">Copy To Clipboard</button>
     </div>
 
     <%- include('./components/footer') %>
@@ -72,6 +75,33 @@
             })
             .catch(error => {
                 document.getElementById('response').textContent = 'Error: ' + error;
+            });
+        });
+
+        const inputs = document.querySelectorAll('#api-form input, #api-form select');
+        const progressBar = document.getElementById('progress-bar');
+
+        inputs.forEach(input => {
+            input.addEventListener('input', function() {
+                let filledCount = 0;
+        
+                inputs.forEach(input => {
+                    if (input.value !== '') {
+                        filledCount++;
+                    }
+                });
+        
+                const filledPercentage = (filledCount / inputs.length) * 100;
+                progressBar.style.width = `${filledPercentage}%`;
+            });
+        });
+    
+        document.getElementById('copy-button').addEventListener('click', function() {
+            const responseText = document.getElementById('response').textContent;
+            navigator.clipboard.writeText(responseText).then(function() {
+                console.log('Copying to clipboard was successful!');
+            }, function(err) {
+                console.error('Could not copy text: ', err);
             });
         });
     </script>
