@@ -16,14 +16,14 @@
             <div class="grid grid-cols-3 gap-4">
                 <div>
                     <label for="endpoint" class="block mb-2">Operation:</label>
-                    <select id="endpoint" name="endpoint" class="w-full mb-4 p-2 bg-white text-purple-600 border-2 border-purple-600 rounded" required>
+                    <select id="endpoint" name="endpoint" class="w-full mb-4 p-2  text-indigo-600 border-2 border-indigo-600 rounded" required>
                         <option value="/api/encrypt">ENCRYPT</option>
                         <option value="/api/decrypt">DECRYPT</option>
                     </select>
                 </div>
                 <div>
                     <label for="method" class="block mb-2">Method:</label>
-                    <select id="method" name="method" class="w-full mb-4 p-2 bg-white border-2 border-purple-600 rounded" required>
+                    <select id="method" name="method" class="w-full mb-4 p-2  border-2 border-indigo-600 rounded" required>
                         <option value="POST" class="text-green-500">POST</option>
                         <option value="GET" class="text-red-500">GET</option>
                         <option value="PUT" class="text-blue-500">PUT</option>
@@ -32,7 +32,7 @@
                 </div>
                 <div>
                     <label for="algorithm" class="block mb-2">Algorithm:</label>
-                    <select id="algorithm" name="algorithm" class="w-full mb-4 p-2 bg-white text-purple-600 border-2 border-purple-600 rounded" required>
+                    <select id="algorithm" name="algorithm" class="w-full mb-4 p-2  text-indigo-600 border-2 border-indigo-600 rounded" required>
                         <% for(let i = 0; i < ciphers.length; i++) { %>
                             <option value="<%= ciphers[i] %>"><%= ciphers[i] %></option>
                         <% } %>
@@ -41,21 +41,21 @@
             </div>
 
             <label for="text" class="block mb-2">Text :</label>
-            <textarea placeholder="Enter text" id="text" maxlength="20" minlength="3" name="method" class="w-full mb-4 p-2 bg-white text-purple-600 border-2 border-purple-600 rounded" required></textarea>
+            <textarea placeholder="Enter text" id="text" maxlength="20" minlength="3" name="method" class="w-full mb-4 p-2  text-indigo-600 border-2 border-indigo-600 rounded" required></textarea>
 
             <label for="key" class="block mb-2">Key :</label>
-            <textarea placeholder="Enter key" type="key" id="key" maxlength="20" minlength="3" name="method" class="w-full mb-4 p-2 bg-white text-purple-600 border-2 border-purple-600 rounded" required></textarea>
+            <textarea placeholder="Enter key" type="key" id="key" maxlength="20" minlength="3" name="method" class="w-full mb-4 p-2  text-indigo-600 border-2 border-indigo-600 rounded" required></textarea>
 
             <div class="flex justify-center">
-                <button type="submit" class="p-2 bg-purple-600 text-white rounded">Send Request</button>
+                <button type="submit" class="p-2 bg-indigo-600 text-white rounded">Send Request</button>
             </div>
         </form>
 
-        <div class="my-5 p-5 border-2 border-purple-600 rounded-md">
+        <div class="my-5 p-5 border-2 border-indigo-600 rounded-md">
             <h2 class="text-center text-xl my-2">Response</h2>
-            <pre id="response" class="p-4 bg-white text-purple-400 border-2 border-purple-400  bg-purple-100 rounded mb-5 py-10"></pre>
+            <pre id="response" class="p-4  text-purple-400 border-2 border-purple-400  bg-purple-100 rounded mb-5 py-10"></pre>
             <div class="flex justify-center mt-4">
-                <button id="copy-button" class="p-2 bg-purple-600 text-white rounded">Copy To Clipboard</button>
+                <button id="copy-button" class="p-2 bg-indigo-600 text-white rounded">Copy To Clipboard</button>
             </div>
         </div>
     </div>
