@@ -1,5 +1,5 @@
 # DataCrypt [WIP]
-an blazingly fast REST API to encrypt / decrypt text using 10 different algorithms
+cryptography API & library for all your security needs 🔒
 
 why datacrypt?
 - compatibility with multiple programming languages
@@ -7,4 +7,8 @@ why datacrypt?
 - robust error handling
 - integration with cryptographic libraries
 - support for various encryption modes
+
+
+
+### work in progress, check back later 😸
  
