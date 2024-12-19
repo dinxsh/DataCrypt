@@ -1,6 +1,6 @@
 ### datacrypt 🔐
 
-> simple hashing utility
+> simple cli hashing utility
 
 ### specifics
 - **Supported Algorithms**: AES, RSA, ECC
