@@ -1,10 +1,14 @@
-# DataCrypt [WIP]
-an blazingly fast REST API to encrypt / decrypt text using 10 different algorithms
+### datacrypt 🔐
 
-why datacrypt?
-- compatibility with multiple programming languages
-- support for different data formats
-- robust error handling
-- integration with cryptographic libraries
-- support for various encryption modes
- 
+> simple cli hashing utility
+
+### specifics
+- **Supported Algorithms**: AES, RSA, ECC
+- **Key Sizes**: 128-bit, 256-bit, 4096-bit
+- **Hashing Functions**: SHA-256, SHA-3, Blake2
+- **Random Number Generation**: CSPRNG implementation
+- **Performance**: Optimized for speed and memory efficiency
+
+### installation 
+
+> coming soon 
